@@ -1,0 +1,26 @@
+{
+  "name": "smartkey-ts-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "build:readme": "bash ./make-readme.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartkeyplatform/smartkey-ts-types.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smartkeyplatform/smartkey-ts-types/issues"
+  },
+  "homepage": "https://github.com/smartkeyplatform/smartkey-ts-types#readme",
+  "devDependencies": {
+    "typescript": "^4.2.4"
+  }
+}
