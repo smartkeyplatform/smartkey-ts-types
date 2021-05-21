@@ -10,64 +10,76 @@ export interface Device {
   name: string
 
   /**
-   * Device description. Is optional.
+   * Device description.
+   * Is optional.
    */
   description?: string
 
   /**
-   * Should always be 'device'. Defaults to 'device'.
+   * Should always be 'device'.
+   * Defaults to 'device'.
    */
   type: 'device'
 
   /**
-   * Supplier address. Needed for device to function. Defaults to supplier address.
+   * Supplier address. Needed for device to function.
+   * Defaults to supplier address.
    */
   supplier: string
 
   /**
-   * Owner address. Needed for device to function. Defaults to supplier address.
+   * Owner address. Needed for device to function.
+   * Defaults to supplier address.
    */
   owner: string
 
   /**
-   * Device active status. Defaults to true.
+   * Device active status.
+   * Defaults to true.
    */
   active: boolean
 
   /**
-   * Device connected status. Defaults to true.
+   * Device connected status.
+   * Defaults to true.
    */
   connected: boolean
 
   /**
-   * Device visible status. Defaults to true.
+   * Device visible status.
+   * Defaults to true.
    */
   visible: boolean
 
   /**
-   * Device interface version. Defaults to 1.
+   * Device interface version.
+   * Defaults to 1.
    */
   version: '1'
 
   /**
-   * Device latitude. Is optional.
+   * Device latitude.
+   * Is optional.
    */
   lat?: number
 
   /**
-   * Device longitude. Is optional.
+   * Device longitude.
+   * Is optional.
    */
   lng?: number
 
   /**
-   * Device altitude. Is optional.
+   * Device altitude.
+   * Is optional.
    */
   alt?: number
 
   /**
-   * Device additional info. Is optional.
+   * Device additional info.
+   * Is optional.
    */
-  additionalInfo?: {
+  details?: {
     physicalAddress?: {
       addressLine1?: string
       addressLine2?: string
@@ -103,9 +115,9 @@ export const DeviceEntryKeys = Object.freeze([
   'version', // string
 
   // LOCATION
-  'lat', // string(float)
-  'lng', // string(float)
-  'alt', // string(float)
+  'lat', // string(float), optional
+  'lng', // string(float), optional
+  'alt', // string(float), optional
 
   // BOOLEANS
   'active', // boolean
@@ -113,7 +125,7 @@ export const DeviceEntryKeys = Object.freeze([
   'visible', // boolean
 
   // OPTIONAL
-  'description', // string
-  'additionalInfo', // string(json)
-  'custom' // string(json)
+  'description', // string, optional
+  'details', // string(json), optional
+  'custom' // string(json), optional
 ])

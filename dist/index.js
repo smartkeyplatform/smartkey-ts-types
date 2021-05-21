@@ -18,7 +18,7 @@ exports.DeviceEntryKeys = Object.freeze([
     'visible',
     // OPTIONAL
     'description',
-    'additionalInfo',
-    'custom' // string(json)
+    'details',
+    'custom' // string(json), optional
 ]);
 //# sourceMappingURL=index.js.map
