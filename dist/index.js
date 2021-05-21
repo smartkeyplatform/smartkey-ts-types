@@ -2,33 +2,23 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DeviceEntryKeys = void 0;
 exports.DeviceEntryKeys = Object.freeze([
+    // BASIC INFO
     'name',
-    'description',
     'type',
-    'device_type',
-    'additional_description',
-    'asset_url',
-    'url',
-    'contact',
-    'visible',
+    'supplier',
+    'owner',
+    'version',
+    // LOCATION
     'lat',
     'lng',
     'alt',
-    'address_line_1',
-    'address_line_2',
-    'city',
-    'postcode',
-    'state',
-    'country',
-    'number',
-    'floor',
+    // BOOLEANS
     'active',
     'connected',
-    'dapp',
-    'owner',
-    'device_model',
-    'custom_',
-    'version',
-    'supports_universal_commands'
+    'visible',
+    // OPTIONAL
+    'description',
+    'additionalInfo',
+    'custom' // string(json)
 ]);
 //# sourceMappingURL=index.js.map

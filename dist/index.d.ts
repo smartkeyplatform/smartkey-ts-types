@@ -3,96 +3,79 @@ export declare type DeviceTypeNormal = 'human' | 'mobile' | 'other';
 export declare type DeviceType = DeviceTypeNormal | DeviceTypeStatic;
 export interface Device {
     /**
-     * Device name
+     * Device name. Is required while creating the device.
      */
     name: string;
     /**
-     * Device description
+     * Device description. Is optional.
      */
     description?: string;
     /**
-     * Should always be 'device'
+     * Should always be 'device'. Defaults to 'device'.
      */
     type: 'device';
     /**
-     * Device type
+     * Supplier address. Needed for device to function. Defaults to supplier address.
      */
-    deviceType?: DeviceType;
+    supplier: string;
     /**
-     * Additional property
-     */
-    additionalDescription?: string;
-    /**
-     * Additional property
-     */
-    assetUrl?: string;
-    /**
-     * Additional property
-     */
-    url?: string;
-    /**
-     * Additional property
-     */
-    contactInfo?: string;
-    /**
-     * Additional property
-     */
-    visible?: boolean;
-    /**
-     * Device location
-     */
-    location?: {
-        lat: number;
-        lng: number;
-        alt?: number;
-    };
-    /**
-     * PhysicalAddress
-     */
-    physicalAddress?: {
-        addressLine1?: string;
-        addressLine2?: string;
-        city?: string;
-        postcode?: string;
-        state?: string;
-        country?: string;
-        number?: string;
-        floor?: string;
-    };
-    /**
-     * Additional property
-     */
-    active?: boolean;
-    /**
-     * Additional property
-     */
-    connected?: boolean;
-    /**
-     * Supplier address. Needed for device to function.
-     */
-    dapp: string;
-    /**
-     * Owner address. Needed for device to function.
+     * Owner address. Needed for device to function. Defaults to supplier address.
      */
     owner: string;
     /**
-     * Device model used in listener, ex. teltonika fmb920
+     * Device active status. Defaults to true.
      */
-    deviceModel?: string;
+    active: boolean;
     /**
-     * custom fields
+     * Device connected status. Defaults to true.
      */
-    custom?: {
-        [key: string]: string | number | boolean;
-    };
+    connected: boolean;
     /**
-     * Device interface version
+     * Device visible status. Defaults to true.
+     */
+    visible: boolean;
+    /**
+     * Device interface version. Defaults to 1.
      */
     version: '1';
     /**
-     * Used in listener to check if device supports universal commands like 'open'.
-     * Defaults to true
+     * Device latitude. Is optional.
      */
-    supportsUniversalCommands?: boolean;
+    lat?: number;
+    /**
+     * Device longitude. Is optional.
+     */
+    lng?: number;
+    /**
+     * Device altitude. Is optional.
+     */
+    alt?: number;
+    /**
+     * Device additional info. Is optional.
+     */
+    additionalInfo?: {
+        physicalAddress?: {
+            addressLine1?: string;
+            addressLine2?: string;
+            city?: string;
+            postcode?: string;
+            state?: string;
+            country?: string;
+            number?: string;
+            floor?: string;
+        };
+        deviceType?: DeviceType;
+        deviceModel?: string;
+        additionalDescription?: string;
+        assetUrl?: string;
+        url?: string;
+        contactInfo?: string;
+    };
+    /**
+     * Device custom fields. Are optional.
+     */
+    custom?: {
+        [key: string]: any;
+    };
 }
 export declare const DeviceEntryKeys: readonly string[];
