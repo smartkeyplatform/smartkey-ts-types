@@ -111,27 +111,26 @@ export interface Device {
   }
 }
 
-export const DeviceEntryKeys = Object.freeze([
+export type DeviceEntryKey =
   // BASIC INFO
-  'name', // string
-  'type', // string
-  'supplier', // string(address)
-  'owner', // string(address)
-  'version', // string
+  | 'name' // string
+  | 'type' // string
+  | 'supplier' // string(address)
+  | 'owner' // string(address)
+  | 'version' // string
 
   // LOCATION
-  'lat', // string(float), optional
-  'lng', // string(float), optional
-  'alt', // string(float), optional
+  | 'lat' // string(float), optional
+  | 'lng' // string(float), optional
+  | 'alt' // string(float), optional
 
   // BOOLEANS
-  'active', // boolean
-  'connected', // boolean
-  'visible', // boolean
+  | 'active' // boolean
+  | 'connected' // boolean
+  | 'visible' // boolean
 
   // OPTIONAL
-  'description', // string, optional
-  'details', // string(json), optional
-  'custom' // string(json), optional
-])
+  | 'description' // string, optional
+  | 'details' // string(json), optional
+  | 'custom' // string(json), optional
 ```
