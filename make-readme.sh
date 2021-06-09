@@ -5,5 +5,5 @@ echo >> $dir
 echo '## Device interface' >> $dir
 echo '```typescript' >> $dir
 echo >> $dir
-cat ./src/index.ts >> $dir
+cat ./Device.ts >> $dir
 echo '```' >> $dir
