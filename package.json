@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build:readme": "bash ./make-readme.sh",
+    "build:readme": "ts-node ./tools/build_readme.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/smartkeyplatform/smartkey-ts-types/issues"
   },
-  "homepage": "https://github.com/smartkeyplatform/smartkey-ts-types#readme"
+  "homepage": "https://github.com/smartkeyplatform/smartkey-ts-types#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
 }
